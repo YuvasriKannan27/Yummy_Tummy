@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+body{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+div li{
+ float:right;
+}
+
+h1{
+background-color:white ;
+	text-shadow:brown ;
+	
+}
+ul{
+list-style-type:none;
+margin:20px;
+padding:10px;
+overflow:hidden;
+background-color:white;
+
+}
+
+li a{
+  display:block;
+  padding:10px;
+  
+  text-decoration:none;
+}
+li{
+
+float:left;
+}
+li a:hover{
+ background-color:white;
+
+}
+
+
+</style>
+
+
+</head>
+<body background="bg3.jpg">
+<center>
+<ul>
+<li><a class="active" href="Home.html">Home</a></li>
+<li><a href="FoodMenu.html">Menu</a></li>
+<li><a href="Payment.html">Pay</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<div>
+<li><a href="index.html">LogOut</a></li>
+</div>
+</ul>
+<script>
+function show(){
+	var data="Name :<br><input type='text' name='Name'><br><br> Feedback :<br><textarea rows='5' cols='80'></textarea>>";
+	document.getElementById('mylocation').innerHTML=data;
+}
+</script>
+
+<form name="myform">
+<input type="button" value="Feedback" onclick="show()">
+<div id="mylocation"></div>
+<br>
+<br><br>
+<a href="thank.html"><input type="button" value="DONE!"></a>
+</body>
+</html>

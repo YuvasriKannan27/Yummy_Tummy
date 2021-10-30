@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function valid(){
+	var Name=document.frm.Name.value;
+	var Password=document.frm.Password.value;
+	var Location=document.frm.Location.value;
+	var EmailId=document.frm.EmailId.value;
+	var Phn=document.frm.Phn.value;
+
+	if(Name==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Name</font>";
+		return false;
+	}
+	else if(Pass==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Password</font>";
+		return false;
+	}
+	else if(Location==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Location</font>";
+		return false;
+	}
+	else if(EmailId==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Email</font>";
+		return false;
+	}
+	else if(Phn==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Phone Number</font>";
+		return false;
+	}
+	
+	
+}
+</script>
+<style>
+body{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+h1{
+ color:white;
+ background-color: maroon;
+ opacity:0.5;
+}
+</style>
+
+</head>
+<body background="bg3.jpg">
+<h1>Don't Resist To Register With Us.......!</h1>
+<br><br><br>
+<br><br><br>
+<form name="frm" action="Regist" method="post" onsubmit="return valid()">
+<center>
+<table border="3" bgcolor="white">
+<tr>
+<th colspan = "2">Register Here</th>
+</tr>
+
+<tr><td>Name :</td><td><input type ="text" name="Name"></td></tr>
+<tr><td>Password :</td><td><input type ="password" name="Password"></td></tr>
+<tr><td>Location :</td><td><input type ="text" name="Location"></td></tr>
+<tr><td>E-mail :</td><td><input type ="text" name="EmailId"></td></tr>
+<tr><td>Phone No :</td><td><input type ="text" name="Phn"></td></tr>
+</table>
+<div id="msg"></div>
+<br>
+<br>
+<center><input type="submit" value="Register" ></center>
+
+</br>
+</br>
+<h2>THANK YOU FOR REGISTER!</h2>
+</center>
+<div id="msg"></div>
+</form>
+
+
+</body>
+</html>

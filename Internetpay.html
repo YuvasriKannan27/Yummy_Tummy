@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body{
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+h1{
+  color:white;
+  background-color:maroon;
+  opacity:0.5;
+  text-align: center;
+}
+</style>
+<script>
+function valid(){
+	var Name=document.frm.Name.value;
+	var Bank=document.frm.Bank.value;
+	var AccountNo=document.frm.AccountNo.value;
+	var Contact=document.frm.Contact.value;
+	
+
+	if(Name==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Name</font>";
+		return false;
+	}
+	else if(Bank==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Bank Detail</font>";
+		return false;
+	}
+	else if(AccountNo==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter AccountNo</font>";
+		return false;
+	}
+	else if(Contact==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Contact Number</font>";
+		return false;
+	}
+	
+	
+	
+	
+}
+</script>
+
+
+</head>
+<body background="bg3.jpg">
+<h1>INTERNET PAY......</h1>
+<form name="frm" action="Interpay" method="post" onsubmit="return valid()">
+<br><br><br>
+
+<center>
+
+<table border="2" bgcolor="white">
+<tr>
+<th colspan = "2">Pay....</th>
+</tr>
+
+<tr>
+<td>Name : </td><td><input type ="text" name="Name"> </td></tr>
+<tr>
+<td>Bank : </td><td><input type ="text" name="Bank"> </td></tr>
+<tr>
+<td>Account No :</td><td><input type ="text" name="AccountNo"> </td></tr>
+<tr>
+<td>Contact Number : </td><td><input type ="text" name="Contact"> </td></tr>
+</center>
+</table>
+<div id="msg"></div>
+<br><br><br>
+<a href="feedback.html"><input type="submit" value="PAY"></a>
+<br><br><br>
+<a href="Payment.html"><input type="button" value="Back"></a>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body{
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+h1{
+ color:white;
+ background-color: maroon;
+ opacity:0.5;
+ text-align: center;
+}
+</style>
+<script>
+function validate(id,pass){
+	var ln=id;
+	var lp=pass;
+	if(ln==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Id</font>";
+	}
+	else if(lp==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Password</font>";
+	}
+	else if(ln=="Yuvasri27" && lp=="27091998"){
+		open("AdminHome.html");
+	}
+	else{
+		document.getElementById("msg").innerHTML="<font color='blue'>Incorrect Userid</font>";	
+	}
+}
+
+
+</script>
+</head>
+<body background="bg3.jpg">
+
+
+<h1>ADMIN</h1>
+<br><br><br>
+
+<form action="" method="post">
+<center>
+<table border="3" bgcolor="white">
+<tr>
+<th colspan = "2">Admin</th>
+</tr>
+
+
+
+<tr><td>Admin Id :</td><td><input type ="text" name="ln"></td></tr>
+<tr><td>Password :</td><td><input type ="text" name="lp"></td></tr>
+
+</table>
+<div id="msg"></div>
+<br>
+<br>
+<center><input type="button" value="Login" onclick="validate(ln.value,lp.value)"></center>
+
+</body>
+</html>

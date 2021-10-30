@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+table{
+	margin-left: auto;
+	margin-right: auto;
+	color:white;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow:hidden;
+background-color: white;
+}
+
+li{
+float: left;
+}
+
+li a{
+display: block;
+color: blue;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+	background-color: white;
+}
+body{
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+h1{
+color:white;
+text-align: center;
+background-color:maroon;
+opacity:0.5;
+}
+
+</style>
+<script type="text/javascript">
+function valid(){
+	var food= document.frm.food.value;
+	var price= document.frm.price.value;
+	
+	if(food==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Food Name</font>";
+		return false;
+		}
+	else if(price==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Price</font>";
+		return false;
+		}
+	
+}
+
+</script>
+
+
+
+<title>Insert title here</title>
+</head>
+<body background="bgim.jpg">
+<h1>ADMIN</h1>
+<table class="center">
+<tr>
+<td>
+<ul>
+<li><a class="active" href="AdminHome.html">Home</a></li>
+<li><a href="addfood.html">Add Food</a></li>
+<li><a href="deletefood.html">Delete Food</a></li>
+<li><a href="index.html">Logout</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+<form name="frm" action="AddFood" onsubmit="return valid()">
+<table>
+<tr><th colspan="2">Add Food</th></tr>
+<tr><td>Enter Food Name :</td><td><input type="text" name="food"></td></tr>
+<tr><td>Enter Price :</td><td><input type="text" name="price"></td></tr>
+</table>
+<div id="msg"></div>
+<br><br>
+<center><input type="submit" value="Add"></center>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body{
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+h1{
+ color:white;
+ background-color: maroon;
+ opacity:0.5;
+}
+</style>
+<script type="text/javascript">
+function valid(){
+	
+	var id=document.frm.id.value;
+	var password=document.frm.password.value;
+
+	
+	 if(id==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Login Id</font>";
+		return false;
+	}
+	else if(password==""){
+		document.getElementById("msg").innerHTML="<font color='blue'>Enter Password</font>";
+		return false;
+	}
+	
+}	
+
+</script>
+</head>
+<body background="bg3.jpg">
+
+
+<h1>WELCOME FRIEND.....LET'S LOGIN TO OUR FOOD TOUR....!</h1>
+<br><br><br>
+
+<form name="frm" action="Login" method="post" onsubmit="return valid()">
+<center>
+<table border="3" bgcolor="white">
+<tr>
+<th colspan = "2">LOGIN</th>
+</tr>
+
+
+
+<tr><td>Login Id :</td><td><input type ="text" name="id"></td></tr>
+<tr><td>Password :</td><td><input type ="text" name="password"></td></tr>
+
+</table>
+<div id="msg"></div>
+<br>
+<br>
+<center><input type="submit" value="Login" ></center> 
+
+</center>
+<div id="msg"></div>
+</form>
+
+</body>
+</html>
